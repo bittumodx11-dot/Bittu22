@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+  
+  .font-bangla {
+    font-family: 'Hind Siliguri', 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+}
+
+/* ========================================================
+   Android Material 3 Design System (Mobile / APK Theme)
+   ======================================================== */
+.theme-android {
+  --md-sys-color-primary: #4f46e5;
+  --md-sys-color-surface: #f8fafc;
+  --md-sys-shape-corner-card: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+.theme-android.dark,
+.dark .theme-android {
+  --md-sys-color-surface: #090d16;
+}
+
+.theme-android .m3-card {
+  border-radius: 1.5rem; /* rounded-3xl */
+  transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.2s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.theme-android .m3-card:active {
+  transform: scale(0.985);
+}
+
+.theme-android .m3-pill {
+  border-radius: 9999px;
+  min-height: 44px;
+}
+
+.theme-android .m3-fab {
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 14px 0 rgba(79, 70, 229, 0.39);
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.theme-android .m3-fab:active {
+  transform: scale(0.94);
+}
+
+/* ========================================================
+   PC Windows Fluent & Desktop Studio Design System (PC Theme)
+   ======================================================== */
+.theme-pc {
+  letter-spacing: -0.015em;
+}
+
+.theme-pc .fluent-card {
+  border-radius: 0.75rem; /* 12px workstation curve */
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+  transition: all 0.15s ease-in-out;
+}
+
+.theme-pc .fluent-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+  border-color: rgba(99, 102, 241, 0.4);
+}
+
+.theme-pc .desktop-window-bar {
+  user-select: none;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Desktop compact custom scrollbars */
+.theme-pc ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.theme-pc ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.theme-pc ::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.4);
+  border-radius: 4px;
+}
+
+.theme-pc ::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.7);
+}
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 8mm;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .print-page-break {
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .print-container,
+  #printable-biodata,
+  #printable-resume {
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    min-height: auto !important;
+  }
+}
+
+/* ========================================================
+   A4 Document Single-Line Section Heading & Page Rules
+   ======================================================== */
+.a4-section-header-title {
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.a4-page {
+  width: 794px !important;
+  min-width: 794px !important;
+  max-width: 794px !important;
+  box-sizing: border-box !important;
+  flex-shrink: 0 !important;
+}
+
+@media print {
+  .a4-page {
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+  }
+}

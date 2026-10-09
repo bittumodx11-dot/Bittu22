@@ -1,0 +1,6 @@
+{
+  "name": "SnapDoc Tools - All-in-One Image, Passport, PDF & Document Studio",
+  "description": "Fast, private, client-side online tools for image editing, passport/ID photo sheets, PDF manipulation, 4-corner document scanning, biodata, and resume creation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
